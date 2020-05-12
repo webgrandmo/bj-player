@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: url('/img/bg.png') center no-repeat;
+    background-size: cover;
+    color: #8a8a8a;
+}
+
+.player-container {
+    width: 450px;
+    background: rgba(255, 255, 255, .6);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, .4);
+    display: flex;
+    position: relative;
+    z-index: 10;
+    margin-top: 5rem;
+}
+
+.cover-container {
+    text-align: center;
+    width: 150px;
+    height: 80px;
+}
+
+.cover-container img {
+    width: inherit;
+    height: auto;
+    animation-name: spin;
+    animation-duration: 8000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    position: absolute;
+    top: -4rem;
+    left: 1rem;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.player-nav {
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+.player-nav button {
+    appearance: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 1rem;
+    color: rgb(221, 114, 209);
+}
+
+.player-nav button:focus {
+    border-color: #e5e5e5;
+}
+
+.player-nav .action-btn-big {
+    font-size: 2rem;
+}
