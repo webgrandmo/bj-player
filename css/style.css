@@ -69,7 +69,8 @@ body {
     outline: none;
     cursor: pointer;
     padding: 0 1rem;
-    color: rgb(221, 114, 209);
+    /* //color: #087CA7; */
+    color: #5A0B4D;
 }
 
 .player-nav button:focus {
