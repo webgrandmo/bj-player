@@ -101,6 +101,7 @@ body {
 }
 .track-info h4 {
     margin: 0;
+    font-weight: 400;
 }
 .player-container.play .track-info {
     z-index: 0;
