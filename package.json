@@ -1,0 +1,20 @@
+{
+  "name": "bj-player",
+  "version": "1.0.0",
+  "description": "Audio player app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webgrandmo/bj-player.git"
+  },
+  "author": "Andriy Trofimov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webgrandmo/bj-player/issues"
+  },
+  "homepage": "https://github.com/webgrandmo/bj-player#readme"
+}
