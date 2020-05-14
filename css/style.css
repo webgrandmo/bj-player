@@ -11,7 +11,7 @@ body {
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-    background: url('/img/bg.png') center no-repeat;
+    background: url('../img/bg.png') center no-repeat;
     background-size: cover;
     color: #8a8a8a;
     letter-spacing: 1px;
