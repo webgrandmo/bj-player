@@ -12,7 +12,7 @@
         title = document.getElementById('title'),
         cover = document.getElementById('cover');
 
-    const songs = ['Cosmic Movie', 'Fallen in Love', 'Fender', 'Shri Krishna Thank You'];
+    const songs = ['Cosmic Movie', 'Fallen', 'Fender', 'Shri Krishna Thank You'];
 
     let songIndex = 3;
 
