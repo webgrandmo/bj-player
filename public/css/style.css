@@ -83,6 +83,7 @@ input[type=range] {
   input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     cursor: pointer;
+    height: 2px;
     background: #e5e5e5;
   }
   input[type=range]::-webkit-slider-thumb {
@@ -90,7 +91,8 @@ input[type=range] {
     height: 14px;
     width: 14px;
     border-radius: 50%;
-    background: #e5e5e5;
+    background: #832D82;
+    margin-top: -6px;
     cursor: pointer;
     -webkit-appearance: none;
     transition: all .3s ease-in;
