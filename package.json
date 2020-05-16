@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/webgrandmo/bj-player/issues"
   },
-  "homepage": "https://github.com/webgrandmo/bj-player#readme"
+  "homepage": "https://github.com/webgrandmo/bj-player#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
