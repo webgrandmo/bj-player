@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>Audio player</title>
 </head>
 
@@ -23,6 +24,11 @@
             <img src="img/vinyl.svg" alt="Album Cover" class="cover" id="cover">
         </div>
         <div class="player-nav">
+            <div class="volume-bar" id="volume-bar">
+                <label class="volume-label" for="volume">Volume</label>
+                <input type="range" id="volume" name="volume"
+                min="0" max="11">
+            </div>
             <button id="prev" class="action-btn">
                 <i class="fas fa-backward"></i>
             </button>

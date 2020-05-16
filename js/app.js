@@ -20,18 +20,18 @@
         title.innerText = song;
         player.src = `mp3/${song}.mp3`;
 
-    }
+    };
 
     const playSong = () => {
         playerContainer.classList.add('play');
         playBtn.innerHTML = `<i class="fas fa-pause"></i>`
         player.play();
-    }
+    };
     const pauseSong = () => {
         playerContainer.classList.remove('play');
         playBtn.innerHTML = `<i class="fas fa-play"></i>`
         player.pause();
-    }
+    };
 
     const prevSong = () => {
         songIndex--;
@@ -41,7 +41,7 @@
 
         loadSong(songs[songIndex]);
         playSong();
-    }
+    };
 
     const nextSong = () => {
         songIndex++;
@@ -51,7 +51,7 @@
 
         loadSong(songs[songIndex]);
         playSong();
-    }
+    };
 
     const updateProgress = (e) => {
 
@@ -59,7 +59,11 @@
         const percent = (currentTime / duration) * 100;
         progress.style.width = `${percent}%`;
 
-    }
+    };
+
+    const changeVolume = (e) => {
+
+    };
 
     function setProgress(e) {
         const width = this.clientWidth;
