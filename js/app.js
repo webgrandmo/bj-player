@@ -7,6 +7,7 @@
         player = document.getElementById('player'),
         progressContainer = document.getElementById('progressbar-container'),
         progress = document.querySelector('.progress-bar'),
+        volume = document.getElementById('volume'),
 
         title = document.getElementById('title'),
         cover = document.getElementById('cover');
@@ -62,7 +63,8 @@
     };
 
     const changeVolume = (e) => {
-
+        console.log(volume.value);
+        player.volume = volume.value / 10;
     };
 
     function setProgress(e) {
@@ -71,6 +73,7 @@
         const duration = player.duration;
         player.currentTime = (clickX / width) * duration;
     }
+
 
 
 
@@ -95,5 +98,6 @@
     player.addEventListener('timeupdate', updateProgress);
     progressContainer.addEventListener('click', setProgress);
     player.addEventListener('ended', nextSong);
+    volume.addEventListener('change', changeVolume);
 
 })();
