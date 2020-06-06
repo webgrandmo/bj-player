@@ -163,6 +163,13 @@ input[type=range] {
     justify-content: space-around;
     width: 60%;
 }
+
+@media screen and (min-width: 900px) {
+    .player-nav {
+        margin-left: 20px;
+    }
+}
+
 .action-btn {
     appearance: none;
     background: transparent;
