@@ -63,7 +63,6 @@
     };
 
     const changeVolume = (e) => {
-        console.log(volume.value);
         player.volume = volume.value / 10;
     };
 
@@ -93,5 +92,9 @@
     progressContainer.addEventListener('click', setProgress);
     player.addEventListener('ended', nextSong);
     volume.addEventListener('change', changeVolume);
+    window.onload = function() {
+        console.log(volume.value);
+        player.volume = volume.value / 10;
+    };
 
 })();
