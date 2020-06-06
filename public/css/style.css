@@ -79,15 +79,15 @@ body {
 .volume-bar {
     position: absolute;
     top: 0;
-    right: 47px;
+    right: 60px;
     width: 40%;
 }
 
-@media screen and (min-width: 900px) {
+/* @media screen and (min-width: 900px) {
     .volume-bar {
         right: 66px;
     }
-}
+} */
 
 .volume-label {
     font-size: 14px;
@@ -142,6 +142,19 @@ input[type=range] {
 
   input[type=range]::-moz-range-thumb:hover {
       transform: scale(1.5);
+  }
+
+  .player-mute {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 21px;
+      right: -32px;
+      color: #832D82;
+      cursor: pointer;
+  }
+  .player-mute .fa-volume-off {
+      color: #e5e5e5;
   }
 
 .player-nav {

@@ -8,6 +8,7 @@
         progressContainer = document.getElementById('progressbar-container'),
         progress = document.querySelector('.progress-bar'),
         volume = document.getElementById('volume'),
+        soundSwitch = document.getElementById('player-mute'),
 
         title = document.getElementById('title'),
         cover = document.getElementById('cover');
@@ -64,6 +65,14 @@
 
     const changeVolume = (e) => {
         player.volume = volume.value / 10;
+        console.log(player.volume);
+        if (!player.volume) {
+            soundSwitch.innerHTML =`<i class="fas fa-volume-off"></i>`;
+        } else if ( (player.volume * 10) >= 1 && (player.volume * 10) < 5) {
+            soundSwitch.innerHTML =`<i class="fa fa-volume-down" aria-hidden="true"></i>`;
+        } else {
+            soundSwitch.innerHTML =`<i class="fa fa-volume-up" aria-hidden="true"></i>`;
+        }
     };
 
     function setProgress(e) {
@@ -71,6 +80,21 @@
         const clickX = e.offsetX;
         const duration = player.duration;
         player.currentTime = (clickX / width) * duration;
+    }
+
+    function switchSound() {
+        if (!player.muted) {            
+            soundSwitch.innerHTML =`<i class="fas fa-volume-off"></i>`;
+            player.muted = true;
+            
+        } else if((player.volume * 10) >= 1 && (player.volume * 10) < 5) {
+            soundSwitch.innerHTML =`<i class="fas fa-volume-down"></i>`;
+            player.muted = false;
+            
+        } else {
+            soundSwitch.innerHTML =`<i class="fas fa-volume-up"></i>`;
+            player.muted = false;
+        }
     }
 
     loadSong(songs[songIndex]);
@@ -92,9 +116,14 @@
     progressContainer.addEventListener('click', setProgress);
     player.addEventListener('ended', nextSong);
     volume.addEventListener('change', changeVolume);
+    soundSwitch.addEventListener('click', switchSound);
     window.onload = function() {
         console.log(volume.value);
+        console.log(player.volume);
         player.volume = volume.value / 10;
+        if ( (player.volume * 10) >= 1 && (player.volume * 10) < 5) {
+            soundSwitch.innerHTML =`<i class="fa fa-volume-down" aria-hidden="true"></i>`;
+        }
     };
 
 })();
