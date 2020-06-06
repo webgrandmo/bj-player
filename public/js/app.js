@@ -74,12 +74,6 @@
         player.currentTime = (clickX / width) * duration;
     }
 
-
-
-
-
-
-
     loadSong(songs[songIndex]);
 
     playBtn.addEventListener('click', () => {
