@@ -13,6 +13,14 @@
         title = document.getElementById('title'),
         cover = document.getElementById('cover');
 
+        window.onload = function() {
+            console.log(volume.value);
+            console.log(player.volume);
+            player.volume = volume.value / 10;
+            if ( (player.volume * 10) >= 1 && (player.volume * 10) < 5) {
+                soundSwitch.innerHTML =`<i class="fa fa-volume-down" aria-hidden="true"></i>`;
+            }
+        };
     const songs = ['Cosmic Movie', 'Fallen', 'Fender', 'Shri Krishna Thank You'];
 
     let songIndex = 3;
@@ -63,7 +71,7 @@
 
     };
 
-    const changeVolume = (e) => {
+    const changeVolume = () => {
         player.volume = volume.value / 10;
         console.log(player.volume);
         if (!player.volume) {
@@ -117,13 +125,5 @@
     player.addEventListener('ended', nextSong);
     volume.addEventListener('change', changeVolume);
     soundSwitch.addEventListener('click', switchSound);
-    window.onload = function() {
-        console.log(volume.value);
-        console.log(player.volume);
-        player.volume = volume.value / 10;
-        if ( (player.volume * 10) >= 1 && (player.volume * 10) < 5) {
-            soundSwitch.innerHTML =`<i class="fa fa-volume-down" aria-hidden="true"></i>`;
-        }
-    };
 
 })();
