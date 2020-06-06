@@ -21,7 +21,23 @@
                 soundSwitch.innerHTML =`<i class="fa fa-volume-down" aria-hidden="true"></i>`;
             }
         };
-    const songs = ['Cosmic Movie', 'Fallen', 'Fender', 'Shri Krishna Thank You'];
+    const songs = [
+        'Cosmic Movie',
+        'Different Worlds',
+        'Far Away',
+        'Im Alone',
+        'Shri Krishna Thank You',
+        'Keep Forgetting',
+        'Misterious Lady',
+        'Pretty Polly',
+        'Fender(Demo)',
+        'Real Love',
+        'See You Tomorrow',
+        'Shine your light',
+        'Spinning Out',
+        'Valentine',
+        'We Play'
+    ];
 
     let songIndex = 3;
 
